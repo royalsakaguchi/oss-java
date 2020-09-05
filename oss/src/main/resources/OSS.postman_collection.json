@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "e6068687-d70e-42e0-89a7-65574fde6934",
+		"name": "OSS",
+		"description": "oss对象存储",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "上传文件",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/img/334906-106.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8081/file/upload",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"file",
+						"upload"
+					]
+				},
+				"description": "上传文件"
+			},
+			"response": []
+		},
+		{
+			"name": "查看桶内所有文件",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8081/file/list",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"file",
+						"list"
+					]
+				},
+				"description": "查看桶内所有文件"
+			},
+			"response": []
+		},
+		{
+			"name": "文件下载",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileName",
+							"value": "images/2020/09/05/15993060142399327.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8081/file/download",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"file",
+						"download"
+					]
+				},
+				"description": "文件下载"
+			},
+			"response": []
+		},
+		{
+			"name": "文件删除",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fileName",
+							"value": "images/2020/09/05/15993060142399327.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8081/file/delete",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8081",
+					"path": [
+						"file",
+						"delete"
+					]
+				},
+				"description": "文件删除"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
